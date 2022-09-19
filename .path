@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# poetry
+export PATH="$HOME/.poetry/bin:$PATH"
+
+# add go path
+export GOPATH="${HOME}/.go"
+export PATH="/usr/local/go/bin:${GOPATH}/bin:${PATH}"
+
+# add rust path
+export PATH="${HOME}/.cargo/bin:${PATH}"
