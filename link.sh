@@ -12,3 +12,4 @@ link .bashrc
 link .exports
 link .path
 link .gitconfig
+link .selected_editor
