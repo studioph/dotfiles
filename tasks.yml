@@ -3,7 +3,7 @@
 - name: Link dotfiles
   ansible.builtin.file:
     path: "{{ home_folder }}/{{ item }}"
-    src: "{{ cwd }}/{{ item }}"
+    src: "{{ repo_dir }}/{{ item }}"
     state: link
     force: true
   loop: "{{ dotfiles_all }}"

@@ -6,4 +6,4 @@ dotfiles_no_source:
   - .gitconfig
 dotfiles_all: "{{ dotfiles_source + dotfiles_no_source }}"
 home_folder: "{{ lookup('ansible.builtin.env', 'HOME') }}"
-cwd: "{{ lookup('ansible.builtin.env', 'PWD') }}"
+repo_dir: "{{ lookup('ansible.builtin.env', 'PWD') }}"
