@@ -12,3 +12,7 @@
     editor = codium
 [init]
     defaultBranch = main
+[pull]
+    rebase = true
+[filter "spacify"]
+    clean = expand --tabs=4 --initial
