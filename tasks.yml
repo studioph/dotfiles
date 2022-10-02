@@ -1,0 +1,15 @@
+---
+
+- name: Link dotfiles
+  ansible.builtin.file:
+    path: "{{ home_folder }}/{{ item }}"
+    src: "{{ cwd }}/{{ item }}"
+    state: link
+    force: true
+  loop: "{{ dotfiles_all }}"
+
+- name: Update bashrc to source dotfiles
+  ansible.builtin.lineinfile:
+    path: "{{ home_folder }}/.bashrc"
+    line: "source {{ item }}"
+  loop: "{{ dotfiles_source }}"

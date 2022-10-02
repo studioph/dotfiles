@@ -1,0 +1,11 @@
+---
+
+- name: Install dotfiles
+  hosts: localhost
+  connection: local
+  vars_files:
+    - vars.yml
+  tasks:
+    - name: Load tasks
+      ansible.builtin.import_tasks:
+        file: tasks.yml
