@@ -11,5 +11,5 @@
 - name: Update bashrc to source dotfiles
   ansible.builtin.lineinfile:
     path: "{{ home_folder }}/.bashrc"
-    line: "source {{ item }}"
+    line: "source $HOME/{{ item }}"
   loop: "{{ dotfiles_source }}"
