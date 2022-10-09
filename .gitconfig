@@ -6,10 +6,11 @@
     process = git-lfs filter-process
     required = true
 [credential]
-    helper = /usr/local/share/gcm-core/git-credential-manager-core
+    helper = cache --timeout=1800
     credentialStore = secretservice
 [core]
     editor = codium
+    askpass = /usr/bin/ksshaskpass
 [init]
     defaultBranch = main
 [pull]
