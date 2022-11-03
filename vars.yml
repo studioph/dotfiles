@@ -4,6 +4,7 @@ dotfiles_source:
   - .selected_editor
 dotfiles_no_source:
   - .gitconfig
+  - .npmrc
 dotfiles_all: "{{ dotfiles_source + dotfiles_no_source }}"
 home_folder: "{{ lookup('ansible.builtin.env', 'HOME') }}"
 repo_dir: "{{ lookup('ansible.builtin.env', 'PWD') }}"
